@@ -5,13 +5,15 @@ h3{
   font-size: large;
   font-weight: bold;
 }
-h3.first {
+h3:first-of-type {
   padding-top:0px;
+}
+
+.joassignment h3 {
+  font-size: 11pt;
 }
 .turnitin h3 {
   font-size: 11pt;
-  padding-top:0px;
-  line-height:"";
 }
 h4{
   margin-left:30px;
@@ -20,7 +22,7 @@ h4{
   font-weight: bold;
 }
 
-/* CSS FOR LIST ITEM INDENTATION */
+/* Pre-tab CSS (can be deleted later) */
 .nobullet li {
   margin-left: 5px;
   padding-bottom: 10px;
@@ -30,108 +32,190 @@ h4{
   margin-left: 30px;
   padding-bottom:10px;
 }
-.turnitin li{
-  padding-bottom: 10px;
+.nobullet h4+ul>li {
+	margin-left:30px;
 }
-.indent li{
-  margin-left:30px;
-}
-.tier2 li{
+.bullet>ul>li>ul>li {
   padding-top: 10px;
   padding-bottom: 0px;
   margin-left: 0px;
 }
-
-/* CSS FOR TABS */
-.tabbs{
-    max-width: 100%;
-    margin: 20px;       
-    font-size: 0;
+.bullet>ul>li>ul>li>ul>li {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin-left: 0px;
 }
-.tabbs input[type="radio"]{
-    display: none;
+.nobullet>ul>li>ul>li {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin-left: 0px;
+}
+.nobullet>ul>li>ul>li>ul>li {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin-left: 0px;
+}
+.bullet h3 {
+	padding-top:20px;
+}
+/* End Pre-tab CSS */
+
+
+/* Start Current Tab CSS */
+.jonobullet li {
+  margin-left: 5px;
+  padding-bottom: 10px;
+  list-style-type: none;
+}
+.jobullet li{
+  margin-left: 30px;
+  padding-bottom:10px;
+}
+.jonobullet h4+ul>li {
+	margin-left:30px;
+}
+.jobullet>ul>li>ul>li {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin-left: 0px;
+}
+.jobullet>ul>li>ul>li>ul>li {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin-left: 0px;
+}
+.jonobullet>ul>li>ul>li {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin-left: 0px;
+}
+.jonobullet>ul>li>ul>li>ul>li {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin-left: 0px;
+}
+/* End Tab CSS */
+
+
+.turnitin li{
+  padding-bottom: 10px;
+}
+.joassignment li{
+  padding-bottom: 10px;
 }
 
-/*
-.tabbs label{
-    display: inline-block;
-    padding: 10px 20px;
-    background: lightgray;
-    color: #fff;    
-    font-size: 15px;    
-}
-*/
-.tabbs label {
-  display: inline-block;
-  position: relative;
-  margin-right: 10px;
-  
 
-  z-index: 2;
-  padding: 10px 20px;
-  border-radius: 5px 5px 0 0;
-  font-size: 15px;
-  font-weight: normal;
-  background: #f5f5f5;
-  cursor: pointer;
-  top: 10px;
 
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+/* YOUTUBE/VIDEO CONTAINER RESIZE */
+
+.jovblock {
+	width:60%;
+	margin: auto;
+	text-align:center;
+}
+.jovblock h4  {
+	margin-left: 0px;
+	padding-top: 30px;
+}
+.jovblock h4:first-of-type {
+	padding-top: 0px;
+}
+.jovideo {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	
+}
+.jovideo iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.jovideo img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
-.tabbs label:hover{   
-    background: #D0D0D0;
-}
-.tabbs label:active,
-.tabbs label:focus{   
-    background: #0088CC;
-}
+/* CUSTOMIZATION FOR JAVASCRIPT PAGES */
 
-.tabbs input[type="radio"]:checked + label{
-    display: inline-block; 
-    padding-left: 15px;
-   font-size: 18px;
-    background: #022f59;
+.container {
+	width: 100%;
+}
+.nav-pills>.active>a, .nav-pills>.active>a:hover, .nav-pills>.active>a:focus {
     color: #fff;
-}
-.tabbs input[type="radio"]:not(:checked) + label{
-    padding-left: 15px;
-}
-
-.tabb-content{
-    display: none;
-    font-size: 14px;
-    font-family: 'segoe ui';
-    padding: 15px;
- background: #f5f5f5;
-    border-top: none;
-    position: relative;
+    background-color: #022F59;
+    /* font-size:  large; */ 
 }
 
-/*
-.tabb-content:before{
-    content: '';
-    position: absolute; top: 5px; left: -1px;
-    width: calc(100% + 2px);
-    height: 3px;
-    background: #F5F5F5;   
+.nav-pills > li > a {
+	margin-right:10px;
+		font-size: large;
+	color: #022F59;
+	background-color: #f5f5f5;
+	border-radius: 5px 5px 0px 0px;
+	border-bottom: 1px solid #e5e5e5;
+	}
+.nav {
+	margin-bottom: 0px;
 }
-*/
-
-
-.tabb-content h3{
-    font-size: 22px;
-}
-.tabbs #tabb1:checked ~ #tabb-content1,
-.tabbs #tabb2:checked ~ #tabb-content2,
-.tabbs #tabb3:checked ~ #tabb-content3{     
-    display: block;
+.tab-content {
+    overflow: visible;
 }
 
-.viddesc {
-  text-align:center;
-  margin-top:20px;
+
+/* START TAB IMAGE + IMAGE OVERLAY */
+.joimg { 
+   position: relative; 
+   padding-top: 20px;
+    max-height: 600px;
+  overflow: hidden;
+
+}
+
+.joimg img {
+  width: 100%;
+  height: 100%;
+}
+
+.imgoverlay {
+    position: absolute;
+    top: 40px;
+    margin-right:5px;
+    box-decoration-break: clone;
+    color: white;
+    font: bold 4vh Helvetica, Sans-Serif;
+        font-size: 4vmin;
+    letter-spacing: -1px;
+    background rgb(0,0,0);
+    background: rgba(0, 0, 0, .5);
+    padding-top:10px;
+    padding-bottom:10px;
+    left:10px;
+    box-shadow: 10px 0 0 rgba(0,0,0,.5),
+				-10px 0 0 rgba(0,0,0,0.5)
+}
+
+@media (max-device-width: 991px) {
+   .mobile-only {
+        display:block !important;
+        margin-top:20px;
+        padding: 10px;
+        text-align:center;
+       	margin-left:auto;
+       	margin-right:auto;
+        background-color:#e5e5e5;
+        border-top: 1px solid #efefef;
+    }
+}
+
+@media (min-device-width: 992px) {
+    .mobile-only {
+        display:none !important;
+    }
 }
